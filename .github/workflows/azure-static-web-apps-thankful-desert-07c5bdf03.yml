@@ -41,10 +41,10 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_DESERT_07C5BDF03 }}
           action: "upload"
-          app_location: "/" # корень проекта
-          api_location: "" # нет API
-          output_location: "dist/my-angular-app/browser" # путь до собранного Angular
-          app_build_command: "npm run build" # команда для сборки Angular
+          app_location: "my-angular-app" 
+          api_location: "" 
+          output_location: "dist/my-angular-app/browser" 
+          app_build_command: "npm run build" 
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
